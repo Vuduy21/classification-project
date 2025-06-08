@@ -1,0 +1,92 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background: none;
+}
+
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/image.jpg') no-repeat center center;
+  background-size: cover;
+  filter: brightness(0.5); 
+  z-index: -1; 
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.input-section,
+.model-selection,
+.button-section,
+.results-section {
+  margin-bottom: 20px;
+}
+
+textarea.form-control {
+  min-height: 150px;
+}
+
+/* Checkbox cách đều */
+.form-check {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .button-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button.btn-lg {
+    width: 100%;
+  }
+}
+
+
+  .button-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button.btn-lg {
+    width: 95%;
+  }
+
+textarea.form-control {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 150px;
+  resize: vertical;
+}
